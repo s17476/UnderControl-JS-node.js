@@ -2,8 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
+const db = require('./Controllers/dataBase');
 
-const equipment = require('./models/equipment');
+
 
 
 const app = express();
@@ -36,9 +37,23 @@ app.get('/', (req, res, next) => {
         } ) ;
 });
 
+app.post('/login', (req, res, next) => {
+    console.log(req.body.user+" "+req.body.password);
+    db.execute('select * from user where user = (?) and password = (?)',[req.body.user, req.body.password])
+        .then(([result]) => {
+            var user = {id: result[0].idUser, name: result[0].Name, surname: result[0].surname};
+
+            console.log(user.name);
+            res.json(user);
+        } )
+        .catch(result => {
+            res.sendStatus(404);
+        } ) ;
+});
+
 
 app.use((req, res, next) => {
-    res.status(404).send('Nie znaleziono strony');
+    res.status(404).send('Wrong address!');
 })
 
 app.listen(3003);
