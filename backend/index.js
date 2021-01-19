@@ -41,9 +41,9 @@ app.post('/login', (req, res, next) => {
     console.log(req.body.user+" "+req.body.password);
     db.execute('select * from user where user = (?) and password = (?)',[req.body.user, req.body.password])
         .then(([result]) => {
-            var user = {id: result[0].idUser, name: result[0].Name, surname: result[0].surname};
+            var user = {Id: result[0].idUser, FirstName: result[0].FirstName, LastName: result[0].LastName};
 
-            console.log(user.name);
+            console.log(user.FirstName);
             res.json(user);
         } )
         .catch(result => {
