@@ -38,16 +38,16 @@ app.get('/', (req, res, next) => {
 });
 
 app.post('/login', (req, res, next) => {
-    console.log(req.body.user+" "+req.body.password);
     db.execute('select * from user where user = (?) and password = (?)',[req.body.user, req.body.password])
         .then(([result]) => {
-            var user = {Id: result[0].idUser, FirstName: result[0].FirstName, LastName: result[0].LastName};
+            var user = {Id: result[0].idUser, FirstName: result[0].FirstName, LastName: result[0].LastName, User: result[0].User};
 
-            console.log(user.FirstName);
+            console.log('Login OK ' + user.User);
             res.json(user);
         } )
         .catch(result => {
             res.sendStatus(404);
+            console.log('Login failed');
         } ) ;
 });
 
