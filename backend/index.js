@@ -26,23 +26,23 @@ app.use((req, res, next) =>{
 })
 
 app.get('/', (req, res, next) => {
-    const equipmentArray = [];
+    const tools = [];
     Tool.fetchAll()
         .then(result => {
-            result[0].forEach((eq) => {
-                equipmentArray.push({
-                    id: eq.idTools,
-                    producer: eq.Producer,
-                    model: eq.Model,
-                    category: eq.Category,
-                    comment: eq.Comment,
-                    status: eq.Status,
-                    lastInspection: eq.LastInspection,
-                    inspectionInterval: eq.InspectionInterval,
-                    owner: eq.Owner
+            result[0].forEach((tool) => {
+                tools.push({
+                    id: tool.idTools,
+                    producer: tool.Producer,
+                    model: tool.Model,
+                    category: tool.Category,
+                    comment: tool.Comment,
+                    status: tool.Status,
+                    lastInspection: tool.LastInspection,
+                    inspectionInterval: tool.InspectionInterval,
+                    owner: tool.Owner
                 });
             })
-            res.json(equipmentArray);
+            res.json(tools);
         } )
         .catch(result => {
         } ) ;
@@ -60,6 +60,16 @@ app.post('/login', (req, res, next) => {
             res.sendStatus(404);
             console.log('Login failed');
         } ) ;
+});
+
+app.delete('/deleteTool', (req, res, next) => {
+    console.log(req.body);
+    db.execute('delete from tool where idTools = (?)', [req.body.id])
+        .then((result) => {
+            res.sendStatus(204);
+        }).catch((result) => {
+            res.sendStatus(409);
+    } )
 });
 
 
