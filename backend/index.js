@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 const db = require('./Controllers/dataBase');
+const tool = require('./models/tool');
+const Tool = tool.Tool;
 
 
 
@@ -25,11 +27,20 @@ app.use((req, res, next) =>{
 
 app.get('/', (req, res, next) => {
     const equipmentArray = [];
-    Equipment.fetchAll()
+    Tool.fetchAll()
         .then(result => {
-
             result[0].forEach((eq) => {
-                equipmentArray.push({id: eq.id, producer: eq.producer, model: eq.model, status: eq.status});
+                equipmentArray.push({
+                    id: eq.idTools,
+                    producer: eq.Producer,
+                    model: eq.Model,
+                    category: eq.Category,
+                    comment: eq.Comment,
+                    status: eq.Status,
+                    lastInspection: eq.LastInspection,
+                    inspectionInterval: eq.InspectionInterval,
+                    owner: eq.Owner
+                });
             })
             res.json(equipmentArray);
         } )
