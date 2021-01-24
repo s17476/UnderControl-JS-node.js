@@ -26,13 +26,22 @@ class Tool{
 
 
 
-    static fetchAll(){
-        return db.execute('select * from tool');
+    static fetchAll(owner){
+        return db.execute('select * from tool where owner = (?)', [owner]);
     }
 
     static fetchById(id){
         return db.execute('select * from tool where id = (?)',[id]);
     }
+
+    save(){
+        console.log('zapis');
+        return db.execute('insert into tool (idTools, Producer, Model, Category, Comment, Status, LastInspection, InspectionInterval, Owner) ' +
+            'values (?, ?, ?, ?, ?, ?, ?, ?, ?)',
+            [this.id, this.producer, this.model, this.category, this.comment, this.status, this.lastInspection, this.inspectionInterval, this.owner]
+        );
+    }
+
 }
 
 module.exports = {

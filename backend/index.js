@@ -25,9 +25,11 @@ app.use((req, res, next) =>{
     next();
 })
 
-app.get('/', (req, res, next) => {
+app.get('/:id', (req, res, next) => {
     const tools = [];
-    Tool.fetchAll()
+    console.log("xxxxxxx");
+    console.log(req.params.id);
+    Tool.fetchAll(req.params.id)
         .then(result => {
             result[0].forEach((tool) => {
                 tools.push({
@@ -45,6 +47,7 @@ app.get('/', (req, res, next) => {
             res.json(tools);
         } )
         .catch(result => {
+            res.sendStatus(404);
         } ) ;
 });
 
@@ -60,6 +63,29 @@ app.post('/login', (req, res, next) => {
             res.sendStatus(404);
             console.log('Login failed');
         } ) ;
+});
+
+app.post('/add', (req, res, next) => {
+    let tmp = new Tool(
+        '0',
+        req.body.producer,
+        req.body.model,
+        req.body.category,
+        req.body.comment,
+        req.body.status,
+        req.body.lastInspection,
+        req.body.inspectionInterval,//////////////////////////////////////owner może cookie??????????????????????/
+        req.body.owner
+        );
+
+    tmp.save()
+        .then((result) => {
+        res.sendStatus(201);
+        })
+        .catch((result) => {
+        res.sendStatus(409);
+        });
+
 });
 
 app.delete('/deleteTool', (req, res, next) => {
