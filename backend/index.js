@@ -58,14 +58,9 @@ app.get('/:id', (req, res, next) => {
 
 app.get('/inspections/:id', (req, res, next) => {
     const inspections = [];
-    console.log("xxxxxxx");
-    console.log(req.params.id);
 
     Inspection.fetchAll(req.params.id)
         .then(result => {
-            console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-
-
             result[0].forEach((ins) => {
                 inspections.push({
                     id: ins.idInspection,
@@ -87,7 +82,6 @@ app.post('/login', (req, res, next) => {
         .then(([result]) => {
             var user = {Id: result[0].idUser, FirstName: result[0].FirstName, LastName: result[0].LastName, User: result[0].User};
 
-            console.log('Login OK ' + user.User);
             res.json(user);
         } )
         .catch(result => {
@@ -138,8 +132,6 @@ app.post('/addInspection', (req, res, next) => {
             req.body.status,
             req.body.id
         )
-        console.log(tmpIns + "xxxxxxxxxxxxxxxxxxxxxxxxx");
-
 
         tmpIns.save()
             .then((result) => {

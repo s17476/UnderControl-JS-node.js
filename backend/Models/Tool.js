@@ -22,8 +22,6 @@ class Tool{
         this.owner = owner;
     }
 
-
-
     static fetchAll(owner){
         return db.execute('SELECT tl.idTools, tl.Producer, tl.Model, tl.Category, tl.Comment, ' +
             'tl.InspectionInterval, Max(ins.date) as date, ins.status ' +

@@ -14,10 +14,8 @@ class Inspection{
         this.toolId = toolId;
     }
 
-
-
     static fetchAll(toolId){
-        return db.execute('select * from inspection where idTools = (?)', [toolId]);
+        return db.execute('select * from inspection where idTools = (?) order by date desc', [toolId]);
     }
 
     static fetchById(id){
