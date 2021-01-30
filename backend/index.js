@@ -4,7 +4,9 @@ const path = require('path');
 const cors = require('cors');
 const db = require('./Controllers/dataBase');
 const tool = require('./models/tool');
+const inspection = require('./models/inspection');
 const Tool = tool.Tool;
+const Inspection = inspection.Inspection;
 
 
 
@@ -27,19 +29,21 @@ app.use((req, res, next) =>{
 
 app.get('/:id', (req, res, next) => {
     const tools = [];
-    console.log("xxxxxxx");
-    console.log(req.params.id);
+
     Tool.fetchAll(req.params.id)
         .then(result => {
+
+
             result[0].forEach((tool) => {
+                console.log("log "+tool.status);
                 tools.push({
                     id: tool.idTools,
                     producer: tool.Producer,
                     model: tool.Model,
                     category: tool.Category,
                     comment: tool.Comment,
-                    status: tool.Status,
-                    lastInspection: tool.LastInspection,
+                    status: tool.status,
+                    lastInspection: tool.date,
                     inspectionInterval: tool.InspectionInterval,
                     owner: tool.Owner
                 });
@@ -49,6 +53,33 @@ app.get('/:id', (req, res, next) => {
         .catch(result => {
             res.sendStatus(404);
         } ) ;
+
+});
+
+app.get('/inspections/:id', (req, res, next) => {
+    const inspections = [];
+    console.log("xxxxxxx");
+    console.log(req.params.id);
+
+    Inspection.fetchAll(req.params.id)
+        .then(result => {
+            console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+
+
+            result[0].forEach((ins) => {
+                inspections.push({
+                    id: ins.idInspection,
+                    comment: ins.comment,
+                    status: ins.status,
+                    lastInspection: ins.date,
+                });
+            })
+            res.json(inspections);
+        } )
+        .catch(result => {
+            res.sendStatus(404);
+        } ) ;
+
 });
 
 app.post('/login', (req, res, next) => {
@@ -67,25 +98,58 @@ app.post('/login', (req, res, next) => {
 
 app.post('/add', (req, res, next) => {
     let tmp = new Tool(
-        '0',
         req.body.producer,
         req.body.model,
         req.body.category,
         req.body.comment,
         req.body.status,
         req.body.lastInspection,
-        req.body.inspectionInterval,//////////////////////////////////////owner może cookie??????????????????????/
+        req.body.inspectionInterval,
         req.body.owner
         );
 
     tmp.save()
+
         .then((result) => {
+            Tool.getLatest(req.body.owner).then((idRes) => {
+                let tmpIns = new Inspection(
+                    req.body.lastInspection,
+                    req.body.comment,
+                    req.body.status,
+                    idRes[0][0].id
+                )
+                tmpIns.save();
+            })
         res.sendStatus(201);
         })
         .catch((result) => {
         res.sendStatus(409);
         });
 
+});
+
+app.post('/addInspection', (req, res, next) => {
+    console.log(req.body);
+
+    Tool.getLatest(req.body.owner).then((idRes) => {
+        let tmpIns = new Inspection(
+            req.body.lastInspection,
+            req.body.comment,
+            req.body.status,
+            req.body.id
+        )
+        console.log(tmpIns + "xxxxxxxxxxxxxxxxxxxxxxxxx");
+
+
+        tmpIns.save()
+            .then((result) => {
+
+            })
+        res.sendStatus(201);
+    })
+        .catch((result) => {
+            res.sendStatus(409);
+        });
 });
 
 app.delete('/deleteTool', (req, res, next) => {
