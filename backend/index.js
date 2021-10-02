@@ -101,7 +101,7 @@ app.post('/add', (req, res, next) => {
         req.body.inspectionInterval,
         req.body.owner
         );
-
+        console.log(req.body);
     tmp.save()
 
         .then((result) => {

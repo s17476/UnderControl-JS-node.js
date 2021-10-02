@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8daccebc-d62c-428f-93d6-3efc38d92843" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Readme.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Inspection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Inspection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Tool.js" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Tool.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../under_control" beforeDir="false" afterPath="$PROJECT_DIR$/../under_control" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../project/mycms" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -61,6 +63,11 @@
       <workItem from="1611347133118" duration="11056000" />
       <workItem from="1611514031020" duration="7519000" />
       <workItem from="1612014177655" duration="15679000" />
+      <workItem from="1612046251657" duration="33000" />
+      <workItem from="1612204221407" duration="18000" />
+      <workItem from="1612711935231" duration="708000" />
+      <workItem from="1612794185074" duration="36000" />
+      <workItem from="1613395953732" duration="760000" />
     </task>
     <servers />
   </component>
