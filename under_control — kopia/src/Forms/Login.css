@@ -1,0 +1,107 @@
+#Login, #Logged{
+    height: 49px;
+}
+#LoginForm{
+    display: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+#LogInImgBlack{
+    display: none;
+}
+#PasswordBlack{
+    display: none;
+}
+#LogInImgWhite, #LogInImgBlack{
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    padding: 5px 10px 0px 15px;
+    float: left;
+    cursor: pointer;
+}
+#Login:hover > #LogInImgWhite{
+    display: none;
+}
+#Login:hover >  #LoginForm #LoginF #PswdDiv #PasswordWhite {
+    display: none;
+}
+#Login:hover > #LogInImgBlack{
+    display: inline-block;
+}
+#Login:hover >  #LoginForm #LoginF #PswdDiv #PasswordBlack {
+    display: inline-block;
+}
+.Login-form{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    padding-top: 3px;
+}
+.Login-input{
+    font-size: large;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+#PasswordBlack, #PasswordWhite{
+    width: 50px;
+    height: 25px;
+}
+#PswdDiv{
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+#Login{
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+#RegBtn{
+    float: right;
+}
+#LoginBtn{
+    float: right;
+}
+.LoginBtn{
+    margin: 0;
+}
+.LoginBtn:hover{
+    color: limegreen;
+
+}
+.Welcome{
+    float: right;
+    color: white;
+    margin: 12px 0 0;
+    font-size: large;
+}
+#RegBtn{
+    font-size: large;
+    padding: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0;
+    margin-top: 12px;
+}
+#LoggedImgWhite, #LoggedImgRed{
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    padding: 5px 10px 0px 15px;
+    float: right;
+    cursor: pointer;
+}
+#LoggedImgRed{
+    display: none;
+}
+.Logged-icon:hover > #LoggedImgWhite{
+    display: none;
+}
+.Logged-icon:hover > #LoggedImgRed{
+    display: inline-block;
+}
+

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d54fb375-c3bc-41e9-985b-d1e5255addaa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/uc.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Accessibility.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Accessibility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Authorization.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Costs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Costs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Forms/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Forms/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Forms/Register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Forms/Register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/Inspection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/Tool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NotFound.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NotFound.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Private/AddInspection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Private/AddTool.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Private/AddTool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Private/History.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Private/Main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Private/Main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Private/PrivateApp.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Private/PrivateApp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Private/Toolbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Private/Toolbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/QrCodes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/QrCodes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1nBzaN85xiN2wEPCoTAN4Yn7wQG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fronc\Documents\Szkoła\VII\TIN\TIN_PROJEKT\under_control\src" />
+      <recent name="C:\Users\fronc\Documents\Szkoła\VII\TIN\TIN_PROJEKT\under_control\img" />
+      <recent name="C:\Users\fronc\Documents\Szkoła\VII\TIN\TIN_PROJEKT\under_control\src\" />
+      <recent name="C:\Users\fronc\Documents\Szkoła\VII\TIN\TIN_PROJEKT\under_control\src\Public" />
+      <recent name="C:\Users\fronc\Documents\Szkoła\VII\TIN\TIN_PROJEKT\under_control\public" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d54fb375-c3bc-41e9-985b-d1e5255addaa" name="Default Changelist" comment="" />
+      <created>1610878335398</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610878335398</updated>
+      <workItem from="1610878338127" duration="13917000" />
+      <workItem from="1610903998298" duration="151000" />
+      <workItem from="1610904387295" duration="4488000" />
+      <workItem from="1610990258264" duration="82314000" />
+      <workItem from="1611514052626" duration="10941000" />
+      <workItem from="1612014141547" duration="12264000" />
+      <workItem from="1612045849530" duration="7000" />
+      <workItem from="1612711951314" duration="8290000" />
+      <workItem from="1612722380724" duration="56000" />
+      <workItem from="1613098165536" duration="824000" />
+      <workItem from="1613161808938" duration="330000" />
+      <workItem from="1613321655913" duration="624000" />
+      <workItem from="1613395912645" duration="806000" />
+      <workItem from="1614545328696" duration="250000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
